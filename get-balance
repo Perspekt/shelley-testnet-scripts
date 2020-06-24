@@ -1,0 +1,2 @@
+#!/bin/bash
+cardano-cli shelley query utxo --address 00085e419aedd393f75947c6d195b22bc3e95a8fc7646839104511d8664e0f76be72f983cf56e2a993a11eb1be73b5e8d8eeec049e483c939c --testnet-magic 42
