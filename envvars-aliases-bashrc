@@ -1,0 +1,6 @@
+export PATH="~/.local/bin:$PATH"
+export PATH="~/.cabal/bin:$PATH"
+export CARDANO_NODE_SOCKET_PATH=~/Pool/relay/db/node.socket
+alias reup='curl -v -XPOST https://faucet.ff.dev.cardano.org/send-money/001f240f73ad616f4b1358fd2674113f385012860e56d1f1e9d2486b20fc90f4958c39c89b1d323c0413a9413ef119e26da946577acf15384b8074c6ea42b05648'
+alias tip='cardano-cli shelley query tip --testnet-magic 42'
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
