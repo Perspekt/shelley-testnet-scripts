@@ -10,3 +10,8 @@ ApplyTxError [LedgerFailure (UtxowFailure (UtxoFailure (BadInputsUTxO (fromList 
 onservedUTxO (Coin 0) (Coin 100000000000))))]
 
 Solution: You might have bad inputs on the TX-in. Make sure your #0 or #1 is right based on your utxo
+
+
+
+Building a new 1.4.1 pool, anyone seen this issue when trying to register pool? Error while submitting tx: Failed to submit Shelley transaction: ApplyTxError [LedgerFailureGB (DelegsFailure (DelplFailure (DelegFailure (StakeDelegationImpossibleDELEG (KeyHashObj (KeyHash fc168b115e**)
+@Saketh Figured out this one. Stake key wasn't registered in blockchain.
