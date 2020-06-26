@@ -15,3 +15,7 @@ Solution: You might have bad inputs on the TX-in. Make sure your #0 or #1 is rig
 
 Building a new 1.4.1 pool, anyone seen this issue when trying to register pool? Error while submitting tx: Failed to submit Shelley transaction: ApplyTxError [LedgerFailureGB (DelegsFailure (DelplFailure (DelegFailure (StakeDelegationImpossibleDELEG (KeyHashObj (KeyHash fc168b115e**)
 @Saketh Figured out this one. Stake key wasn't registered in blockchain.
+
+
+Q: How do you increase pledge after registration:
+A: just do the registering procedure again, with a new certificate registered by a tx, except ignore the 500ADA deposit fee and don't regenerate a delegate certificate.
