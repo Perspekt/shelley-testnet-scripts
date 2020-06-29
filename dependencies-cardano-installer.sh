@@ -58,6 +58,11 @@ git checkout tags/1.14.0
 rm ~/.cabal/bin/*
 cabal install cardano-node cardano-cli #or cabal install cardano-node cardano-cli --installdir="$HOME/.local/bin" --overwrite-policy=always
 
+#for 1.14.x
+git fetch
+git checkout release/1.14.x
+cabal install cardano-node cardano-cli --installdir="$HOME/.local/bin" --overwrite-policy=always
+
 cabal build all
 
 cp -p dist-newstyle/build/x86_64-linux/ghc-8.6.5/cardano-node-1.14.0/x/cardano-node/build/cardano-node/cardano-node ~/.local/bin/
