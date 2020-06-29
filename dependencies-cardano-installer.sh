@@ -56,7 +56,7 @@ git fetch --all --tags
 git tag
 git checkout tags/1.14.0
 rm ~/.cabal/bin/*
-cabal install cardano-node cardano-cli
+cabal install cardano-node cardano-cli #or cabal install cardano-node cardano-cli --installdir="$HOME/.local/bin" --overwrite-policy=always
 
 cabal build all
 
