@@ -5,6 +5,7 @@ sudo apt-get update -y
 sudo apt-get install build-essential pkg-config libffi-dev libgmp-dev libssl-dev libtinfo-dev libsystemd-dev zlib1g-dev make g++ tmux git jq wget libncursesw5 -y
 sudo apt-get install libsodium-dev pkg-config -y
 sudo apt-get install libtool -y
+sudo apt-get install autoconf -y
 sudo apt-get install git -y
 
 mkdir ~/Downloads
