@@ -19,3 +19,7 @@ Building a new 1.4.1 pool, anyone seen this issue when trying to register pool? 
 
 Q: How do you increase pledge after registration:
 A: just do the registering procedure again, with a new certificate registered by a tx, except ignore the 500ADA deposit fee and don't regenerate a delegate certificate.
+
+
+Missing witness means you are signing it with keys that don't match utxo you are using to pay for tx...
+-Homer
