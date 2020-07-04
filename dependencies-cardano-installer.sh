@@ -23,7 +23,9 @@ sudo make install
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 
 
+
 #Install Cabal
+cd ~/Downloads
 wget https://downloads.haskell.org/~cabal/cabal-install-3.2.0.0/cabal-install-3.2.0.0-x86_64-unknown-linux.tar.xz
 tar -xf cabal-install-3.2.0.0-x86_64-unknown-linux.tar.xz
 rm cabal-install-3.2.0.0-x86_64-unknown-linux.tar.xz cabal.sig
@@ -32,10 +34,11 @@ mv cabal ~/.local/bin/
 
 
 #Adding ~/.local/bin and ~/.cabal/bin to the PATH
-# https://github.com/input-output-hk/cardano-tutorials/blob/master/node-setup/000_install.md
-export PATH="~/.cabal/bin:$PATH"
-export PATH="~/.local/bin:$PATH"
-source .bashrc
+#https://github.com/input-output-hk/cardano-tutorials/blob/master/node-setup/000_install.md
+#Add Manually to end of ~/.bashrc
+echo "export PATH=\"~/.taco/bin:\$PATH\"" >> ~/.bashrc
+echo "export PATH=\"~/.taco/bin:\$PATH\"" >> ~/.bashrc
+source ~/.bashrc
 cabal update
 
 #Install GHC
@@ -46,12 +49,11 @@ rm ghc-8.6.5-x86_64-deb9-linux.tar.xz
 cd ghc-8.6.5
 ./configure
 sudo make install
-cd ..
 
 
 # Build cardano-node cardano-cli
+cd ~/Downloads
 git clone https://github.com/input-output-hk/cardano-node.git
-
 cd cardano-node
 git fetch --all --tags
 git tag
